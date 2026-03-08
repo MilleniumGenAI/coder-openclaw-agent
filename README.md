@@ -2,6 +2,16 @@
 
 `coder` is a coding-focused OpenClaw sub-agent for background code execution, test-driven edits, bug fixing, small project scaffolding, and small-to-medium data-analysis tasks.
 
+## ClawHub
+This repository now includes a ClawHub-ready wrapper skill at `clawhub/coder-openclaw-agent/`.
+
+Use that folder as the publication entrypoint for ClawHub. The root repository remains the source package for:
+- the OpenClaw prompt pack;
+- the sandbox Docker image definition;
+- the integration contract and runtime documentation.
+
+For ClawHub-specific packaging and publication notes, see `clawhub/README.md`.
+
 ## What This Project Includes
 - A hardened `workspace-coder` prompt pack for OpenClaw.
 - A Docker sandbox image definition for reproducible Linux-based execution.
@@ -68,6 +78,8 @@ Recommended checks before publishing changes:
 - `openclaw sandbox explain --agent coder`
 - at least one successful real coding smoke task through `openclaw agent --agent coder --json`
 - one blocked-input task confirming honest `PARTIAL` or `FAILURE` behavior
+- ClawHub structure check: `clawhub/coder-openclaw-agent/SKILL.md` exists, uses YAML frontmatter, and does not require Windows-specific local paths
+- ClawHub docs smoke: a new OpenClaw user can follow `clawhub/coder-openclaw-agent/SKILL.md` plus this `README.md` without reading private memory/session files
 
 ## Known Limits
 See `docs/known-limits.md`.
