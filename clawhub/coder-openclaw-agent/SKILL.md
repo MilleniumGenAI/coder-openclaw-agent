@@ -1,16 +1,18 @@
 ---
 name: "Coder for OpenClaw"
 description: "Install and wire a coding-focused OpenClaw sub-agent for background code execution, test-driven edits, bug fixing, small project scaffolding, and small-to-medium data-analysis tasks."
-version: "0.1.2"
+version: "0.1.3"
 metadata:
   openclaw:
-    emoji: "??"
     homepage: "https://github.com/MilleniumGenAI/coder-openclaw-agent"
     requires:
       bins:
         - openclaw
         - docker
         - git
+      config:
+        - openclaw.json
+        - openai-codex provider profile configured in OpenClaw
 ---
 
 # Coder for OpenClaw
