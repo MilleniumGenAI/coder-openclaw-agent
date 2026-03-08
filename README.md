@@ -10,6 +10,8 @@ Use that folder as the publication entrypoint for ClawHub. The root repository r
 - the sandbox Docker image definition;
 - the integration contract and runtime documentation.
 
+ClawHub publishes skills under platform-wide `MIT-0` terms. The repository itself keeps its own source license at the root.
+
 For ClawHub-specific packaging and publication notes, see `clawhub/README.md`.
 
 ## What This Project Includes

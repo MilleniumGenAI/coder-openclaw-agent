@@ -1,11 +1,16 @@
 ---
 name: "Coder for OpenClaw"
 description: "Install and wire a coding-focused OpenClaw sub-agent for background code execution, test-driven edits, bug fixing, small project scaffolding, and small-to-medium data-analysis tasks."
-author: "MilleniumGenAI"
-repo_url: "https://github.com/MilleniumGenAI/coder-openclaw-agent"
-version: "0.1.1"
-license: "MIT"
-openclaw_version: "2026.3.x"
+version: "0.1.2"
+metadata:
+  openclaw:
+    emoji: "??"
+    homepage: "https://github.com/MilleniumGenAI/coder-openclaw-agent"
+    requires:
+      bins:
+        - openclaw
+        - docker
+        - git
 ---
 
 # Coder for OpenClaw
@@ -70,6 +75,7 @@ openclaw agent --agent coder --json --message "Return strictly valid JSON matchi
 
 ## Notes
 - This is an OpenClaw-only v1 package.
+- ClawHub publishes skills under platform-wide MIT-0 terms.
 - The runtime source of truth is `openclaw/workspace-coder/SOUL.md`.
 - Default working area inside the sandbox is `/tmp/coder/<task_name>/`.
 - The expected output contract is strict JSON with `SUCCESS | PARTIAL | FAILURE`.
