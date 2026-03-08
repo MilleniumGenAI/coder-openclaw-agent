@@ -1,0 +1,38 @@
+{
+  "id": "coder",
+  "workspace": "<ABSOLUTE_PATH_TO_REPO>/openclaw/workspace-coder",
+  "model": {
+    "primary": "openai-codex/gpt-5.3-codex",
+    "fallbacks": []
+  },
+  "sandbox": {
+    "mode": "all",
+    "workspaceAccess": "rw",
+    "scope": "agent",
+    "docker": {
+      "image": "coder-sandbox:latest",
+      "readOnlyRoot": false,
+      "network": "bridge"
+    }
+  },
+  "tools": {
+    "profile": "coding",
+    "alsoAllow": [
+      "web_search",
+      "web_fetch"
+    ],
+    "deny": [
+      "browser",
+      "message",
+      "cron",
+      "gateway",
+      "agents_list",
+      "nodes",
+      "sessions_spawn",
+      "sessions_list",
+      "sessions_history",
+      "subagents",
+      "sessions_send"
+    ]
+  }
+}
